@@ -16,5 +16,6 @@ public class hollowlooppat {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
