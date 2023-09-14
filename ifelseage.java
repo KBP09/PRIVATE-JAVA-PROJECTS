@@ -11,5 +11,6 @@ public class ifelseage {
         else{
             System.out.println("Not an adult");
         }
+        sc.close();
     }
 }
