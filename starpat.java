@@ -11,5 +11,6 @@ public class starpat {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
