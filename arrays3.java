@@ -21,6 +21,5 @@ public class arrays3 {
         else{
             System.out.println("the arrays is not sorted in ascending order");
         }
-
     }
 }
