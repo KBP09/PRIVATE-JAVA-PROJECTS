@@ -57,6 +57,27 @@ public class LLquestions {
         head.next = null;
         head = prevNode;
     }
+    public Node recursiveRotate(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node newHead = recursiveRotate(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+    void printList(){
+        Node currNode = head;
+        if(head == null){
+            System.out.println("The list is empty");
+            return;
+        }
+        while(currNode != null){
+            System.out.print(currNode.data+"->");
+            currNode = currNode.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String args[]){
         LLquestions list = new LLquestions();
         Scanner sc = new Scanner(System.in);
@@ -65,7 +86,9 @@ public class LLquestions {
             int x = sc.nextInt();
             list.addLast(x);
         }
-        System.out.println(list.index_Finder());
+        list.head = list.recursiveRotate(list.head);
+        list.printList();
         sc.close();
+
     }
 }
